@@ -5,8 +5,7 @@
  * @author (votre nom)
  * @version (un numéro de version ou une date)
  */
-public class Joueur
-{
+public class Joueur {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private String pseudo;
     private int mana;
@@ -16,8 +15,7 @@ public class Joueur
     /**
      * Constructeur d'objets de classe Joueur
      */
-    public Joueur()
-    {
+    public Joueur() {
         this.pseudo = "Sacha";
         this.mana = 100;
         this.pointDeVie = 100;
@@ -30,30 +28,28 @@ public class Joueur
      * @param  y   le paramètre de la méthode
      * @return     la somme de x et de y
      */
-    public int getMana()
-    {
-        // Insérez votre code ici
+    public int getMana() {
         return this.mana;
     }
     
-    public int getPointDeVie(){
+    public int getPointDeVie() {
         return this.pointDeVie;
     }
     
-    public String getPseudo(){
+    public String getPseudo() {
         return this.pseudo;
     }
     
-    public Camp getCamp(){
+    public Camp getCamp() {
         return this.camp;
     }
     
-    public void setCamp(Camp camp){
+    public void setCamp(Camp camp) {
         this.camp = camp;
     }
     
-    public int boostMana(){
-        if(this.camp.getNom() == "Empire"){
+    public int boostMana() {
+        if (this.camp.getNom() == "Empire") {
             this.mana += this.camp.boostMana();
         }
         return this.mana;

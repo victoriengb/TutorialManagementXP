@@ -29,9 +29,9 @@ import org.junit.jupiter.api.Test;
  * qui réalise les engagements, et suivi d'un appel à tearDown(), qui les
  * détruit.
  */
-public class JoueurTest
-{
-    private Joueur Sacha;
+public class JoueurTest {
+    private Joueur sacha;
+
     private Camp empire;
 
     // Définissez ici les variables d'instance nécessaires à vos engagements;
@@ -45,8 +45,7 @@ public class JoueurTest
     /**
      * Constructeur de la classe-test JoueurTest
      */
-    public JoueurTest()
-    {
+    public JoueurTest() {
     }
 
     /**
@@ -55,11 +54,10 @@ public class JoueurTest
      * Méthode appelée avant chaque appel de méthode de test.
      */
     @BeforeEach
-    public void setUp() // throws java.lang.Exception
-    {
-        Sacha = new Joueur();
+    public void setUp() {
+        sacha = new Joueur();
         empire = new Camp();
-        Sacha.setCamp(empire);
+        sacha.setCamp(empire);
     }
 
     /**
@@ -68,24 +66,21 @@ public class JoueurTest
      * Méthode appelée après chaque appel de méthode de test.
      */
     @AfterEach
-    public void tearDown() // throws java.lang.Exception
-    {
+    public void tearDown() {
         //Libérez ici les ressources engagées par setUp()
     }
 
     @Test
-    public void testToString()
-    {
-        Joueur Sacha = new Joueur();
-        assertEquals("Sacha PV 100 Mana 100", Sacha.toString());
+    public void testToString() {
+        Joueur sacha = new Joueur();
+        assertEquals("Sacha PV 100 Mana 100", sacha.toString());
     }
 
    
 
     @Test
-    public void testBoostMana()
-    {
-        assertEquals(150, Sacha.boostMana());
+    public void testBoostMana() {
+        assertEquals(150, sacha.boostMana());
     }
 }
 
