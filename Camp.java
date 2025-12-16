@@ -5,8 +5,7 @@
  * @author (votre nom)
  * @version (un numéro de version ou une date)
  */
-public class Camp
-{
+public class Camp {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private String nom = "Empire";
 
