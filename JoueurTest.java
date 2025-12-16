@@ -30,8 +30,8 @@ import org.junit.jupiter.api.Test;
  * détruit.
  */
 public class JoueurTest {
-    private Joueur sacha;
 
+    private Joueur sacha;
     private Camp empire;
 
     // Définissez ici les variables d'instance nécessaires à vos engagements;
@@ -45,7 +45,8 @@ public class JoueurTest {
     /**
      * Constructeur de la classe-test JoueurTest
      */
-    public JoueurTest() {
+    public JoueurTest () {
+
     }
 
     /**
@@ -54,7 +55,7 @@ public class JoueurTest {
      * Méthode appelée avant chaque appel de méthode de test.
      */
     @BeforeEach
-    public void setUp() {
+    public void setUp () {
         sacha = new Joueur();
         empire = new Camp();
         sacha.setCamp(empire);
@@ -66,12 +67,12 @@ public class JoueurTest {
      * Méthode appelée après chaque appel de méthode de test.
      */
     @AfterEach
-    public void tearDown() {
+    public void tearDown () {
         //Libérez ici les ressources engagées par setUp()
     }
 
     @Test
-    public void testToString() {
+    public void testToString () {
         Joueur sacha = new Joueur();
         assertEquals("Sacha PV 100 Mana 100", sacha.toString());
     }
@@ -79,7 +80,7 @@ public class JoueurTest {
    
 
     @Test
-    public void testBoostMana() {
+    public void testBoostMana () {
         assertEquals(150, sacha.boostMana());
     }
 }
