@@ -1,19 +1,18 @@
-# language: fr
-Fonctionnalité: Gestion des joueurs
+Feature: Player Management
 
-  Scénario: Création d'un nouveau joueur
-    Étant donné un nouveau joueur
-    Alors le pseudo du joueur est "Sacha"
-    Et le joueur a 100 points de vie
-    Et le joueur a 100 points de mana
+  Scenario: Creating a new player
+    Given a new player
+    Then the player's nickname is "Sacha"
+    And the player has 100 health points
+    And the player has 100 mana points
 
-  Scénario: Boost de mana avec le camp Empire
-    Étant donné un nouveau joueur
-    Et le joueur rejoint le camp "Empire"
-    Quand le joueur booste son mana
-    Alors le joueur a 150 points de mana
+  Scenario: Boosting mana with Empire camp
+    Given a new player
+    And the player joins the "Empire" camp
+    When the player boosts their mana
+    Then the player has 150 mana points
 
-  Scénario: Affichage des informations du joueur
-    Étant donné un nouveau joueur
-    Quand j'affiche les informations du joueur
-    Alors j'obtiens "Sacha PV 100 Mana 100"
+  Scenario: Displaying player information
+    Given a new player
+    When I display the player information
+    Then I get "Sacha PV 100 Mana 100"
