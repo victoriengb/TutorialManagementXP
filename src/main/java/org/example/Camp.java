@@ -1,3 +1,5 @@
+package org.example;
+
 public class Camp {
 
     private String nom = "Empire";
