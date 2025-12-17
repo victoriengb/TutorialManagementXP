@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Joueur {
 
     private String pseudo;
@@ -35,7 +37,7 @@ public class Joueur {
     }
     
     public int boostMana () {
-        if (this.camp.getNom() == "Empire") {
+        if (this.camp != null && this.camp.getNom().equals("Empire"))  {
             this.mana += this.camp.boostMana();
         }
         return this.mana;
