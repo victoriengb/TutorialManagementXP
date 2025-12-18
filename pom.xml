@@ -23,7 +23,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit Platform Suite (pour @Suite) - AJOUTE CECI -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>

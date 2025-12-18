@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Joueur {
 
+
     private String pseudo;
     private int mana;
     private int pointDeVie;
@@ -13,6 +14,13 @@ public class Joueur {
         this.pseudo = "Sacha";
         this.mana = 100;
         this.pointDeVie = 100;
+        this.camp = null;
+    }
+
+    public Joueur(String pseudo, int pointDeVie, int mana) {
+        this.pseudo = pseudo;
+        this.pointDeVie = pointDeVie;
+        this.mana = mana;
         this.camp = null;
     }
 
@@ -31,7 +39,17 @@ public class Joueur {
     public Camp getCamp () {
         return this.camp;
     }
-    
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public void setPointDeVie(int pointDeVie) {
+        this.pointDeVie = pointDeVie;
+    }
     public void setCamp (Camp camp) {
         this.camp = camp;
     }
