@@ -73,6 +73,10 @@ public class Joueur {
         for (Joueur joueur : joueurs) {
             joueur.setPointDeVie(joueur.getPointDeVie() - degats);
         }
-        this.setMana(this.getMana() - 30);
+        decrementMana(30);
+    }
+
+    private void decrementMana(int decrement) {
+        this.setMana(this.getMana() - decrement);
     }
 }
