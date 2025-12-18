@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Represents a camp that can provide mana boosts to players.
+ */
 public class Camp {
 
     private String nom = "Empire";
@@ -19,6 +22,7 @@ public class Camp {
         return 50;
     }
 
+    @Override
     public String toString() {
         return this.nom;
     }

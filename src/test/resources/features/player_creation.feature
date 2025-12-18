@@ -16,3 +16,4 @@ Feature: Player Creation
       | "Sacha" | 100        | 100  |
       | "Lucie" | 150        | 80   |
       | "Marc"  | 90         | 120  |
+      | "Marc"  | 90         | 120  |

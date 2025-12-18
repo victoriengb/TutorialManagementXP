@@ -3,7 +3,12 @@ Feature: Player Information Display
   I want to see my player's current stats
   So that I can track my progress.
 
-  Scenario: Displaying player information
-    Given a player with nickname "Sacha", 100 PV, and 100 Mana
+  Scenario Outline: Displaying different player stats
+    Given a player with nickname <pseudo>, <pv> PV, and <mana> Mana
     When I display the player information
-    Then I get "Sacha PV 100 Mana 100"
+    Then I get <expected>
+
+    Examples:
+      | pseudo  | pv  | mana | expected                |
+      | "Sacha" | 100 | 100  | "Sacha PV 100 Mana 100" |
+      | "Lucie" | 75  | 50   | "Lucie PV 75 Mana 50"   |

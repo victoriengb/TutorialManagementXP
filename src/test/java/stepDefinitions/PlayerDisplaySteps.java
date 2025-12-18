@@ -5,11 +5,12 @@ import org.example.Joueur;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerDisplaySteps {
+
     private Joueur joueur;
     private String affichage;
 
     @Given("a player with nickname {string}, {int} PV, and {int} Mana")
-    public void a_player_with_stats(String pseudo, Integer pv, Integer mana) {
+    public void aPlayerWithStats(String pseudo, Integer pv, Integer mana) {
         joueur = new Joueur();
         joueur.setPseudo(pseudo);
         joueur.setPointDeVie(pv);
@@ -17,13 +18,13 @@ public class PlayerDisplaySteps {
     }
 
     @When("I display the player information")
-    public void i_display_the_player_information() {
+    public void iDisplayThePlayerInformation() {
         affichage = joueur.toString();
     }
 
     @Then("I get {string}")
-    public void i_get(String resultatAttendu) {
-        assertEquals(resultatAttendu, affichage);
+    public void iGet(String resultatAttendu) {
+        assertEquals(resultatAttendu, affichage,
+                "Display should match expected format");
     }
 }
-

@@ -1,8 +1,11 @@
 package org.example;
 
 import java.util.List;
-import java.util.Objects;
 
+/**
+ * Represents a player with health points, mana, and camp affiliation.
+ * Can perform attacks and receive mana boosts from their camp.
+ */
 public class Joueur {
 
     private String pseudo;
@@ -56,6 +59,11 @@ public class Joueur {
         this.camp = camp;
     }
 
+    /**
+     * Applies a mana boost if the player belongs to the "Empire" camp.
+     *
+     * @return The updated mana value after boost
+     */
     public int boostMana() {
         if (this.camp != null && this.camp.getNom().equals("Empire")) {
             this.mana += this.camp.boostMana();
@@ -63,12 +71,17 @@ public class Joueur {
         return this.mana;
     }
 
+    @Override
     public String toString() {
-        StringBuilder s = new StringBuilder(this.pseudo + " PV " + this.pointDeVie
-                + " Mana " + this.mana);
-        return s.toString();
+        return this.pseudo + " PV " + this.pointDeVie + " Mana " + this.mana;
     }
 
+    /**
+     * Attacks a list of players, dealing damage to each and consuming mana.
+     *
+     * @param joueurs The list of players to attack
+     * @param degats  The amount of damage to deal to each player
+     */
     public void attaquer(List<Joueur> joueurs, int degats) {
         for (Joueur joueur : joueurs) {
             joueur.setPointDeVie(joueur.getPointDeVie() - degats);
@@ -77,6 +90,6 @@ public class Joueur {
     }
 
     private void decrementMana(int decrement) {
-        this.setMana(this.getMana() - decrement);
+        this.mana -= decrement;
     }
 }
