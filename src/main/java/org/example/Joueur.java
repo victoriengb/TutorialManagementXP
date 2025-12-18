@@ -48,4 +48,16 @@ public class Joueur {
         " Mana " + this.mana);
         return s.toString();
     }
+
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
+
+    public void setPointDeVie(int pointDeVie) {
+        this.pointDeVie = pointDeVie;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
 }
