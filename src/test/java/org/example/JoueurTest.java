@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;  // ← AJOUTE CETTE LIGNE
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JoueurTest {
 
@@ -43,7 +43,7 @@ public class JoueurTest {
     public void testAttaquer() {
         List<Joueur> joueurs = new ArrayList<>();
         Joueur pierre = new Joueur("Pierre", 100, 100);
-        Joueur zelios = new Joueur("Pierre", 100, 100);
+        Joueur zelios = new Joueur("Zelios", 100, 100);
 
         joueurs.add(pierre);
         joueurs.add(zelios);

@@ -4,22 +4,22 @@ public class Camp {
 
     private String nom = "Empire";
 
-    public Camp () {
-    
+    public Camp() {
     }
-    public void setNom (String nom) {
+
+    public void setNom(String nom) {
         this.nom = nom;
     }
-    public String getNom () {
-        return this.nom;
-    }
-    
-    public int boostMana () {
-        return 50;
-    }
-    
-    public String toString () {
+
+    public String getNom() {
         return this.nom;
     }
 
+    public int boostMana() {
+        return 50;
+    }
+
+    public String toString() {
+        return this.nom;
+    }
 }
