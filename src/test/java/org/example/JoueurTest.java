@@ -3,6 +3,10 @@ package org.example;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;  // ← AJOUTE CETTE LIGNE
 
 public class JoueurTest {
@@ -33,5 +37,21 @@ public class JoueurTest {
     @Test
     public void testBoostMana() {
         assertEquals(150, sacha.boostMana());
+    }
+
+    @Test
+    public void testAttaquer() {
+        List<Joueur> joueurs = new ArrayList<>();
+        Joueur pierre = new Joueur("Pierre", 100, 100);
+        Joueur zelios = new Joueur("Pierre", 100, 100);
+
+        joueurs.add(pierre);
+        joueurs.add(zelios);
+
+        sacha.attaquer(joueurs, 30);
+
+        assertEquals(70, pierre.getPointDeVie());
+        assertEquals(70, zelios.getPointDeVie());
+        assertEquals(70, sacha.getMana());
     }
 }

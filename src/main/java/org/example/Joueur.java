@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Joueur {
@@ -65,5 +66,12 @@ public class Joueur {
         StringBuilder s = new StringBuilder(this.pseudo + " PV " + this.pointDeVie +
         " Mana " + this.mana);
         return s.toString();
+    }
+
+    public void attaquer(List<Joueur> joueurs, int degats) {
+        for (Joueur joueur : joueurs) {
+            joueur.setPointDeVie(joueur.getPointDeVie()-degats);
+        }
+        this.setMana(this.getMana()-30);
     }
 }
