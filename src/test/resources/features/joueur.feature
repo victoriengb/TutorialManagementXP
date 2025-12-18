@@ -1,4 +1,7 @@
 Feature: Player Management
+  En tant qu'utilisateur,
+  Je veux pouvoir créer un joueur
+  Afin de commencer à jouer.
 
   Scenario Outline: Creating a new player
     Given a new player
